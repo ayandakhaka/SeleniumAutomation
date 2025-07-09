@@ -1,0 +1,19 @@
+<suite name="Suite">
+  <test thread-count="5" name="Test_Smoke">
+    <parameter name="browser" value="Firefox"></parameter>
+  <groups>
+  	<run>
+  		<include name="Smoke"></include>
+  	</run>
+  </groups>
+    <classes>
+      <class name="com.mystore.testcases.LoginTest"/>
+      <class name="com.mystore.testcases.LaptopsAndNotebookTest"/>
+      <class name="com.mystore.testcases.RegisterAccountLandingPageTest"/>
+      <class name="com.mystore.testcases.AddToCartPriceTest"/>
+      <class name="com.mystore.testcases.RegisterAccountPageTest"/>
+      <class name="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
+      <class name="com.mystore.testcases.AddToCartTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

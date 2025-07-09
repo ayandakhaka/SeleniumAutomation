@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.mystore.testcases.AddToCartPriceTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyItemAddedToCart"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.AddToCartPriceTest -->
+      <class name="com.mystore.testcases.LoginTest">
+        <methods>
+          <include name="verifySuccessLogin"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.LoginTest -->
+      <class name="com.mystore.testcases.RegisterAccountLandingPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="registrationAccountTest"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.RegisterAccountLandingPageTest -->
+      <class name="com.mystore.testcases.AddToCartTest">
+        <methods>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="verifyItemAddedToCart"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.AddToCartTest -->
+      <class name="com.mystore.testcases.RegisterAccountPageTest">
+        <methods>
+          <include name="verifyAccountRegisterTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.RegisterAccountPageTest -->
+      <class name="com.mystore.testcases.LaptopsAndNotebookTest">
+        <methods>
+          <include name="verifyLaptopsAndNotebookPageHeaderText"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.LaptopsAndNotebookTest -->
+      <class name="com.mystore.testcases.YourStoreHomePageLaunchTest">
+        <methods>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyHomePageCurrentURL"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.YourStoreHomePageLaunchTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

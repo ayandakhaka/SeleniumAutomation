@@ -1,0 +1,30 @@
+2025-07-09 19:13:24 INFO  Log:11 - =====================================Login Test TEST START=========================================
+2025-07-09 19:13:24 INFO  Log:22 - User clicks on My Account
+2025-07-09 19:13:24 INFO  Log:22 - User clicks on login liink
+2025-07-09 19:13:26 INFO  Log:11 - =====================================User enters cridentials and click on sign-in TEST START=========================================
+2025-07-09 19:13:29 INFO  Log:22 - User verifying if login is succesful
+2025-07-09 19:14:13 INFO  Log:11 - =====================================AddToCartPriceTest TEST START=========================================
+2025-07-09 19:14:13 INFO  Log:22 - User clicks on My Account
+2025-07-09 19:14:14 INFO  Log:22 - User clicks on login link
+2025-07-09 19:14:16 INFO  Log:22 - User enters credentials and sign-in
+2025-07-09 19:14:20 INFO  Log:22 - User hover on LaptopsAndNotebooks link
+2025-07-09 19:15:17 INFO  Log:11 - =====================================YourStoreHomePageLaunchTest TEST START=========================================
+2025-07-09 19:20:14 INFO  Log:11 - =====================================Login Test TEST START=========================================
+2025-07-09 19:20:14 INFO  Log:22 - User clicks on My Account
+2025-07-09 19:20:14 INFO  Log:22 - User clicks on login liink
+2025-07-09 19:20:15 INFO  Log:11 - =====================================User enters cridentials and click on sign-in TEST START=========================================
+2025-07-09 19:20:18 INFO  Log:22 - User verifying if login is succesful
+2025-07-09 19:20:42 INFO  Log:11 - =====================================YourStoreHomePageLaunchTest TEST START=========================================
+2025-07-09 19:28:59 INFO  Log:11 - =====================================Login Test TEST START=========================================
+2025-07-09 19:28:59 INFO  Log:22 - User clicks on My Account
+2025-07-09 19:29:01 INFO  Log:22 - User clicks on login liink
+2025-07-09 19:29:01 INFO  Log:11 - =====================================User enters cridentials and click on sign-in TEST START=========================================
+2025-07-09 19:29:12 INFO  Log:22 - User verifying if login is succesful
+2025-07-09 19:35:54 INFO  Log:11 - =====================================Login Test TEST START=========================================
+2025-07-09 19:35:54 INFO  Log:22 - User clicks on My Account
+2025-07-09 19:35:55 INFO  Log:22 - User clicks on login liink
+2025-07-09 19:35:55 INFO  Log:11 - =====================================User enters cridentials and click on sign-in TEST START=========================================
+2025-07-09 19:36:06 INFO  Log:22 - User verifying if login is succesful
+2025-07-09 19:36:52 INFO  Log:11 - =====================================YourStoreHomePageLaunchTest TEST START=========================================
+2025-07-09 19:49:46 INFO  Log:11 - =====================================YourStoreHomePageLaunchTest TEST START=========================================
+2025-07-09 19:50:26 INFO  Log:11 - =====================================YourStoreHomePageLaunchTest TEST START=========================================

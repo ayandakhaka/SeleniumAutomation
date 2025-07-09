@@ -1,0 +1,16 @@
+<suite name="CrossBrowser" thread-count="3">
+  <test name="ChromeTest">
+  <parameter name="browser" value="Chrome"></parameter>
+    <classes>
+      <class name="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="FirefoxTest">
+  <parameter name="browser" value="Firefox"></parameter>
+    <classes>
+      <class name="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
