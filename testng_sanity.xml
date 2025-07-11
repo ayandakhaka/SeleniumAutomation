@@ -1,6 +1,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test_Sanity">
-  <parameter name="browser" value="Firefox"></parameter>
+  <parameter name="browser" value="Chrome"></parameter>
+   <listeners>
+		<listener class-name="com.mystore.utility.ListenerClass"></listener>
+	</listeners>
   <groups>
   	<run>
   		<include name="Sanity"></include>

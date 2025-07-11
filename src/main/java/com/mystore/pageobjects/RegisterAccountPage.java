@@ -3,6 +3,8 @@
  */
 package com.mystore.pageobjects;
 
+import java.math.BigDecimal;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -78,43 +80,24 @@ public class RegisterAccountPage extends BaseTest
 	}
 
 
-	public AccountPage registerUser() {
+	public AccountPage registerUser(
+			String phoneN,
+			String pass,
+			String passConfirm) 
+	{
 
 		String emailGenerator = randomString().toLowerCase() + "@gmail.com";
 
 		action.type(firstName, generateString());
 		action.type(lastName, generateString());
 		action.type(email, emailGenerator);
-		action.type(telephone, prop.getProperty("telephone"));
-		action.type(password, prop.getProperty("password"));
-		action.type(confirmPass, prop.getProperty("confirmPass"));
+		BigDecimal bd = new BigDecimal(phoneN);
+		action.type(telephone, bd.toPlainString());
+		action.type(password, pass.replace(".0", ""));
+		action.type(confirmPass, passConfirm.replace(".0", ""));
 		clickYesRadioButton();
 		checkPrivatePolicyCheckbox();
 		clickContinueBtn();
 		return new AccountPage();
 	}
-
-	public String randomString() {
-
-		String generateRandom = RandomStringUtils.randomAlphanumeric(9);
-		return generateRandom;
-	}
-
-	public String randomNumeric() {
-
-		String generateRandom = RandomStringUtils.randomNumeric(7);
-		return generateRandom;
-	}
-
-	public String generateString()
-	{
-		int length = 10;
-		boolean useLetters = true;
-		boolean useNumbers = false;
-		String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
-
-		return generatedString;
-	}
-
-
 }

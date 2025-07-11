@@ -26,6 +26,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.mystore.actioninterface.ActionInterface;
 //import com.mystore.actioninterface.ActionInterface;
 import com.mystore.base.BaseTest;
 
@@ -33,7 +34,7 @@ import com.mystore.base.BaseTest;
  * @author Ayanda Khaka
  *
  */
-public class Action extends BaseTest {
+public class Action extends BaseTest implements ActionInterface {
 
 	public void scrollByVisibilityOfElement(WebDriver driver, WebElement ele) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -41,14 +42,14 @@ public class Action extends BaseTest {
 
 	}
 
-	//@Override
+	@Override
 	public void click(WebDriver driver, WebElement ele) {
 
 		Actions act = new Actions(driver);
 		act.moveToElement(ele).click().build().perform();
 
 	}
-
+	@Override
 	public boolean findElement(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -68,7 +69,7 @@ public class Action extends BaseTest {
 		return flag;
 	}
 
-	
+	@Override
 	public boolean isDisplayed(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		flag = findElement(driver, ele);
@@ -84,7 +85,7 @@ public class Action extends BaseTest {
 		}
 		return flag;
 	}
-
+	@Override
 	public boolean isSelected(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		flag = findElement(driver, ele);
@@ -100,7 +101,7 @@ public class Action extends BaseTest {
 		}
 		return flag;
 	}
-
+	@Override
 	public boolean isEnabled(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		flag = findElement(driver, ele);
@@ -124,7 +125,7 @@ public class Action extends BaseTest {
 	 * @param text
 	 * @return - true/false
 	 */
-	
+	@Override
 	public boolean type(WebElement ele, String text) {
 		boolean flag = false;
 		try {
@@ -147,7 +148,7 @@ public class Action extends BaseTest {
 		return flag;
 	}
 
-	
+	@Override
 	public boolean selectBySendkeys(String value,WebElement ele) {
 		boolean flag = false;
 		try {
@@ -179,7 +180,7 @@ public class Action extends BaseTest {
 	 *                    Listbox etc..)
 	 * 
 	 */
-	
+	@Override
 	public boolean selectByIndex(WebElement element, int index) {
 		boolean flag = false;
 		try {
@@ -210,7 +211,7 @@ public class Action extends BaseTest {
 	 *                    Listbox etc..)
 	 */
 
-	
+	@Override
 	public boolean selectByValue(WebElement element,String value) {
 		boolean flag = false;
 		try {
@@ -242,7 +243,7 @@ public class Action extends BaseTest {
 	 *                    Listbox etc..)
 	 */
 
-	
+	@Override
 	public boolean selectByVisibleText(String visibletext, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -261,7 +262,7 @@ public class Action extends BaseTest {
 		}
 	}
 
-	
+	@Override
 	public boolean mouseHoverByJavaScript(WebElement ele) {
 		boolean flag = false;
 		try {
@@ -287,7 +288,7 @@ public class Action extends BaseTest {
 		}
 	}
 
-	
+	@Override
 	public boolean JSClick(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -313,7 +314,7 @@ public class Action extends BaseTest {
 		return flag;
 	}
 
-	
+	@Override
 	public boolean switchToFrameByIndex(WebDriver driver,int index) {
 		boolean flag = false;
 		try {
@@ -339,7 +340,7 @@ public class Action extends BaseTest {
 	 * @param idValue : Frame ID wish to switch
 	 * 
 	 */
-	
+	@Override
 	public boolean switchToFrameById(WebDriver driver,String idValue) {
 		boolean flag = false;
 		try {
@@ -365,7 +366,7 @@ public class Action extends BaseTest {
 	 * @param nameValue : Frame Name wish to switch
 	 * 
 	 */
-	
+	@Override
 	public boolean switchToFrameByName(WebDriver driver,String nameValue) {
 		boolean flag = false;
 		try {
@@ -384,7 +385,7 @@ public class Action extends BaseTest {
 		}
 	}
 
-	
+	@Override
 	public boolean switchToDefaultFrame(WebDriver driver) {
 		boolean flag = false;
 		try {
@@ -403,7 +404,7 @@ public class Action extends BaseTest {
 		}
 	}
 
-	
+	@Override
 	public void mouseOverElement(WebDriver driver,WebElement element) {
 		boolean flag = false;
 		try {
@@ -420,7 +421,7 @@ public class Action extends BaseTest {
 		}
 	}
 
-	
+	@Override
 	public boolean moveToElement(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -437,7 +438,7 @@ public class Action extends BaseTest {
 		return flag;
 	}
 
-	
+	@Override
 	public boolean mouseover(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
@@ -447,16 +448,10 @@ public class Action extends BaseTest {
 		} catch (Exception e) {
 			return false;
 		} finally {
-			/*
-			 * if (flag) {
-			 * SuccessReport("MouseOver ","MouserOver Action is performed on \""+locatorName
-			 * +"\""); } else {
-			 * failureReport("MouseOver","MouseOver action is not performed on \""
-			 * +locatorName+"\""); }
-			 */
 		}
 	}
 	
+	@Override
 	public boolean draggable(WebDriver driver,WebElement source, int x, int y) {
 		boolean flag = false;
 		try {
@@ -478,6 +473,7 @@ public class Action extends BaseTest {
 		}
 	}
 	
+	@Override
 	public boolean draganddrop(WebDriver driver,WebElement source, WebElement target) {
 		boolean flag = false;
 		try {
@@ -496,12 +492,10 @@ public class Action extends BaseTest {
 		}
 	}
 	
-	
+	@Override
 	public boolean slider(WebDriver driver,WebElement ele, int x, int y) {
 		boolean flag = false;
 		try {
-			// new Actions(driver).dragAndDropBy(dragitem, 400, 1).build()
-			// .perform();
 			new Actions(driver).dragAndDropBy(ele, x, y).build().perform();// 150,0
 			Thread.sleep(5000);
 			flag = true;
@@ -518,7 +512,7 @@ public class Action extends BaseTest {
 		}
 	}
 	
-	
+	@Override
 	public boolean rightclick(WebDriver driver,WebElement ele) {
 		boolean flag = false;
 		try {
@@ -526,7 +520,6 @@ public class Action extends BaseTest {
 			clicker.contextClick(ele).perform();
 			flag = true;
 			return true;
-			// driver.findElement(by1).sendKeys(Keys.DOWN);
 		} catch (Exception e) {
 
 			return false;
@@ -539,7 +532,7 @@ public class Action extends BaseTest {
 		}
 	}
 	
-	
+	@Override
 	public boolean switchWindowByTitle(WebDriver driver,String windowTitle, int count) {
 		boolean flag = false;
 		try {
@@ -556,7 +549,6 @@ public class Action extends BaseTest {
 			}
 			return flag;
 		} catch (Exception e) {
-			//flag = true;
 			return false;
 		} finally {
 			if (flag) {
@@ -567,6 +559,7 @@ public class Action extends BaseTest {
 		}
 	}
 	
+	@Override
 	public boolean switchToNewWindow(WebDriver driver) {
 		boolean flag = false;
 		try {
@@ -588,6 +581,7 @@ public class Action extends BaseTest {
 		}
 	}
 	
+	@Override
 	public boolean switchToOldWindow(WebDriver driver) {
 		boolean flag = false;
 		try {
@@ -609,6 +603,7 @@ public class Action extends BaseTest {
 		}
 	}
 	
+	@Override
 	public int getColumncount(WebElement row) {
 		List<WebElement> columns = row.findElements(By.tagName("td"));
 		int a = columns.size();
@@ -620,7 +615,7 @@ public class Action extends BaseTest {
 		return a;
 	}
 	
-	
+	@Override
 	public int getRowCount(WebElement table) {
 		List<WebElement> rows = table.findElements(By.tagName("tr"));
 		int a = rows.size() - 1;
@@ -635,6 +630,7 @@ public class Action extends BaseTest {
 	 * 
 	 */
 	
+	@Override
 	public boolean Alert(WebDriver driver) {
 		boolean presentFlag = false;
 		Alert alert = null;
@@ -661,6 +657,7 @@ public class Action extends BaseTest {
 		return presentFlag;
 	}
 	
+	@Override
 	public boolean launchUrl(WebDriver driver,String url) {
 		boolean flag = false;
 		try {
@@ -678,7 +675,7 @@ public class Action extends BaseTest {
 		}
 	}
 	
-	
+	@Override
 	public boolean isAlertPresent(WebDriver driver) 
 	{ 
 		try 
@@ -692,7 +689,7 @@ public class Action extends BaseTest {
 		}   // catch 
 	}
 	
-	
+	@Override
 	public String getTitle(WebDriver driver) {
 		boolean flag = false;
 
@@ -703,7 +700,7 @@ public class Action extends BaseTest {
 		return text;
 	}
 	
-	
+	@Override
 	public String getCurrentURL(WebDriver driver)  {
 		boolean flag = false;
 
@@ -714,7 +711,7 @@ public class Action extends BaseTest {
 		return text;
 	}
 	
-	
+	@Override
 	public boolean click1(WebElement locator, String locatorName) {
 		boolean flag = false;
 		try {
@@ -733,7 +730,7 @@ public class Action extends BaseTest {
 
 	}
 	
-	
+	@Override
 	public void fluentWait(WebDriver driver,WebElement element, int timeOut) {
 	    Wait<WebDriver> wait = null;
 	    try {
@@ -747,19 +744,23 @@ public class Action extends BaseTest {
 	    }
 	}
 	
+	@Override
 	public void implicitWait(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
+	@Override
 	public void explicitWait(WebDriver driver, WebElement element, int timeOut ) {
 		WebDriverWait wait = new WebDriverWait(driver,timeOut);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
+	@Override
 	public void pageLoadTimeOut(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().pageLoadTimeout(timeOut, TimeUnit.SECONDS);
 	}
 	
+	@Override
 	public String screenShot(WebDriver driver, String filename) {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
@@ -777,6 +778,7 @@ public class Action extends BaseTest {
 		return newImageString;
 	}
 	
+	@Override
 	public String getCurrentTime() {
 		String currentDate = new SimpleDateFormat("yyyy-MM-dd-hhmmss").format(new Date());
 		return currentDate;

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-09T19:49:21 SAST" name="Suite" finished-at="2025-07-09T19:50:29 SAST" duration-ms="67552">
+  <suite started-at="2025-07-11T14:46:22 SAST" name="Suite" finished-at="2025-07-11T14:47:09 SAST" duration-ms="46977">
     <groups>
-      <group name="Smoke">
-        <method signature="YourStoreHomePageLaunchTest.verifyHomePageCurrentURL()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" name="verifyHomePageCurrentURL" class="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
-        <method signature="YourStoreHomePageLaunchTest.verifyHomePageTitle()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" name="verifyHomePageTitle" class="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
-        <method signature="YourStoreHomePageLaunchTest.verifyHomePageCurrentURL()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" name="verifyHomePageCurrentURL" class="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
-        <method signature="YourStoreHomePageLaunchTest.verifyHomePageTitle()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" name="verifyHomePageTitle" class="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
-      </group> <!-- Smoke -->
+      <group name="Sanity">
+        <method signature="AddToCartPriceTest.verifyItemAddedToCart()[pri:0, instance:com.mystore.testcases.AddToCartPriceTest@36bc55de]" name="verifyItemAddedToCart" class="com.mystore.testcases.AddToCartPriceTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="AddToCartPriceTest.verifyItemAddedToCart()[pri:0, instance:com.mystore.testcases.AddToCartPriceTest@36bc55de]" name="verifyItemAddedToCart" class="com.mystore.testcases.AddToCartPriceTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-07-09T19:49:21 SAST" name="ChromeTest" finished-at="2025-07-09T19:49:48 SAST" duration-ms="26766">
-      <class name="com.mystore.testcases.YourStoreHomePageLaunchTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" started-at="2025-07-09T19:49:21 SAST" name="loadConfig" finished-at="2025-07-09T19:49:21 SAST" duration-ms="4" status="PASS">
+    <test started-at="2025-07-11T14:46:22 SAST" name="Test_All" finished-at="2025-07-11T14:47:09 SAST" duration-ms="46977">
+      <class name="com.mystore.testcases.AddToCartPriceTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.mystore.testcases.AddToCartPriceTest@36bc55de]" started-at="2025-07-11T14:46:21 SAST" name="loadConfig" finished-at="2025-07-11T14:46:22 SAST" duration-ms="708" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" started-at="2025-07-09T19:49:21 SAST" name="setup" finished-at="2025-07-09T19:49:34 SAST" duration-ms="12412" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.AddToCartPriceTest@36bc55de]" started-at="2025-07-11T14:46:22 SAST" name="setup" finished-at="2025-07-11T14:46:44 SAST" duration-ms="21799" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,84 +28,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageCurrentURL()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" started-at="2025-07-09T19:49:34 SAST" name="verifyHomePageCurrentURL" finished-at="2025-07-09T19:49:34 SAST" duration-ms="33" status="PASS">
+        <test-method signature="verifyItemAddedToCart()[pri:0, instance:com.mystore.testcases.AddToCartPriceTest@36bc55de]" started-at="2025-07-11T14:46:44 SAST" name="verifyItemAddedToCart" finished-at="2025-07-11T14:47:05 SAST" duration-ms="21675" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePageCurrentURL -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" started-at="2025-07-09T19:49:34 SAST" name="tearDown" finished-at="2025-07-09T19:49:35 SAST" duration-ms="1886" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" started-at="2025-07-09T19:49:35 SAST" name="setup" finished-at="2025-07-09T19:49:46 SAST" duration-ms="10042" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageTitle()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" started-at="2025-07-09T19:49:46 SAST" name="verifyHomePageTitle" finished-at="2025-07-09T19:49:46 SAST" duration-ms="331" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomePageTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@6a78afa0]" started-at="2025-07-09T19:49:46 SAST" name="tearDown" finished-at="2025-07-09T19:49:48 SAST" duration-ms="1895" status="PASS">
+        </test-method> <!-- verifyItemAddedToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.AddToCartPriceTest@36bc55de]" started-at="2025-07-11T14:47:05 SAST" name="tearDown" finished-at="2025-07-11T14:47:09 SAST" duration-ms="3423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.mystore.testcases.YourStoreHomePageLaunchTest -->
-    </test> <!-- ChromeTest -->
-    <test started-at="2025-07-09T19:49:48 SAST" name="FirefoxTest" finished-at="2025-07-09T19:50:29 SAST" duration-ms="40730">
-      <class name="com.mystore.testcases.YourStoreHomePageLaunchTest">
-        <test-method is-config="true" signature="beforeSuit()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:49:21 SAST" name="beforeSuit" finished-at="2025-07-09T19:49:21 SAST" duration-ms="421" status="PASS">
+        <test-method is-config="true" signature="afterSuit()[pri:0, instance:com.mystore.testcases.AddToCartPriceTest@36bc55de]" started-at="2025-07-11T14:47:09 SAST" name="afterSuit" finished-at="2025-07-11T14:47:10 SAST" duration-ms="1150" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuit -->
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:49:48 SAST" name="loadConfig" finished-at="2025-07-09T19:49:48 SAST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:49:48 SAST" name="setup" finished-at="2025-07-09T19:50:06 SAST" duration-ms="17840" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageCurrentURL()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:50:06 SAST" name="verifyHomePageCurrentURL" finished-at="2025-07-09T19:50:06 SAST" duration-ms="18" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomePageCurrentURL -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:50:06 SAST" name="tearDown" finished-at="2025-07-09T19:50:09 SAST" duration-ms="2959" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:50:09 SAST" name="setup" finished-at="2025-07-09T19:50:26 SAST" duration-ms="17273" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageTitle()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:50:26 SAST" name="verifyHomePageTitle" finished-at="2025-07-09T19:50:26 SAST" duration-ms="22" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomePageTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mystore.testcases.YourStoreHomePageLaunchTest@302552ec]" started-at="2025-07-09T19:50:26 SAST" name="tearDown" finished-at="2025-07-09T19:50:29 SAST" duration-ms="2600" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.mystore.testcases.YourStoreHomePageLaunchTest -->
-    </test> <!-- FirefoxTest -->
+        </test-method> <!-- afterSuit -->
+      </class> <!-- com.mystore.testcases.AddToCartPriceTest -->
+    </test> <!-- Test_All -->
   </suite> <!-- Suite -->
 </testng-results>

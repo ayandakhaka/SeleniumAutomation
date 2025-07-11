@@ -7,6 +7,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseTest;
+import com.mystore.dataprovider.DataProviders;
+import com.mystore.pageobjects.AccountPage;
 import com.mystore.pageobjects.AddToCartPage;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.LaptopsAndNotebooksPage;
@@ -21,11 +23,12 @@ public class AddToCartPriceTest extends BaseTest {
 	LaptopsAndNotebooksPage lanp;
 	AddToCartPage atcp;
 	ProductAddedToCartPage patcp;
+	AccountPage ap;
 
 	@Parameters("browser")
 	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
 	public void setup(String browser) {
-
+		Log.info("Launching the browser");
 		launchApp(browser);
 
 	}
@@ -35,24 +38,29 @@ public class AddToCartPriceTest extends BaseTest {
 		getDriver().quit();
 	}
 	
-	@Test(groups = "regression")
+	@Test(groups = {"Regression","Sanity"})
 	public void verifyItemAddedToCart() throws InterruptedException {
-		Log.startTestCase("AddToCartPriceTest");
+		Log.startTestCase("verifyItemAddedToCart");
 		page = new HomePage();
 		lp = new LoginPage();
 		lanp = new LaptopsAndNotebooksPage();
 		atcp = new AddToCartPage();
 		patcp = new ProductAddedToCartPage();
+		ap = new AccountPage();
 		Log.info("User clicks on My Account");
 		page.clickMyaccountLink();
 		Log.info("User clicks on login link");
 		page.clickLoginLink();
 		Log.info("User enters credentials and sign-in");
-		lp.login(prop.getProperty("email"),
-				prop.getProperty("password"));
+		//lp.login(email, pass);
+		lp.login(prop.getProperty("email"), prop.getProperty("password"));
+		ap.clickAddToCartButtonPrice();
 		Log.info("User hover on LaptopsAndNotebooks link");
 		page.hoverOnLaptopsAndNotebooks();
+		Log.info("User clicks on LaptopsAndNotebooks link");
 		page.clickOnAllLaptopsAndNotepadsLink();
+		Log.info("User add to cart delivery date,quantity and clicks on add to cart");
+		
 		lanp.clickAddToCartItem();
 		
 		atcp.enterAvailableOptions(prop.getProperty("deliveryDate"),
@@ -64,9 +72,9 @@ public class AddToCartPriceTest extends BaseTest {
 		String expectedFomattedTotalPrice = String.format("%.2f", expectedTotal);
 		double totalFromCart = atcp.getTotal();
 		String actualFomattedTotalPriced = String.format("%.2f", totalFromCart);
-		
+		System.out.println(actualFomattedTotalPriced + " = " + expectedFomattedTotalPrice);
 		Assert.assertEquals(actualFomattedTotalPriced, expectedFomattedTotalPrice);
-		Log.endTestCase("AddToCartPriceTest");
+		Log.endTestCase("verifyItemAddedToCart");
 		
 	}
 		

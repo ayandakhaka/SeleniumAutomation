@@ -42,19 +42,23 @@ public class YourStoreHomePageLaunchTest extends BaseTest {
 	
 	@Test(groups = "Smoke")
 	public void verifyHomePageTitle() {
-		Log.startTestCase("YourStoreHomePageLaunchTest");
+		Log.startTestCase("verifyHomePageTitle");
 		String actualResults = homePage.getTitle();
 		String expectedResults = prop.getProperty("homePageTitle");
-		
+		Log.info("User verify the title of the home page");
 		Assert.assertEquals(actualResults, expectedResults);
+		Log.endTestCase("verifyHomePageTitle");
+		
 	}
 	
 	@Test(groups = "Smoke")
 	public void verifyHomePageCurrentURL() {
-		
+		Log.startTestCase("verifyHomePageTitle");
 		String actualResults = homePage.getHomePageCurrentURL();
 		String expectedResults = prop.getProperty("url");
+		Log.info("User verify the url of the home page");
 		Assert.assertEquals(actualResults, expectedResults);
+		Log.endTestCase("verifyHomePageTitle");
 	}
 	
 }

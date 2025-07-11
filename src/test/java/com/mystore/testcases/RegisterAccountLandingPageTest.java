@@ -15,6 +15,7 @@ import com.mystore.base.BaseTest;
 import com.mystore.pageobjects.AccountPage;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.RegisterAccountPage;
+import com.mystore.utility.Log;
 
 /**
  * Author Ayanda Khaka 
@@ -29,7 +30,7 @@ public class RegisterAccountLandingPageTest extends BaseTest {
 	@Parameters("browser")
 	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
 	public void setup(String browser) {
-
+		Log.info("Launching the browser");
 		launchApp(browser);
 
 	}
@@ -41,11 +42,16 @@ public class RegisterAccountLandingPageTest extends BaseTest {
 	
 	@Test(groups = {"Regression","Sanity"})
 	public void registrationAccountTest() throws InterruptedException {
+		Log.info("registrationAccountTest");
 		page = new HomePage();
 		rap = new RegisterAccountPage();
+		Log.info("User clicks on My account link");
 		page.clickMyaccountLink();
+		Log.info("User clicks on Rigistration link");
 		page.clickOnRegisterLink();
+		Log.info("User verify registration success header");
 		Assert.assertEquals(rap.getRegisterHeaderText(), prop.getProperty("registerHeader"));
+		Log.endTestCase("registrationAccountTest");
 	}
 
 	

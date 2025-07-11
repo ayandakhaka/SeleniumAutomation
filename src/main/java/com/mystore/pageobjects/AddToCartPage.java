@@ -35,14 +35,16 @@ public class AddToCartPage extends BaseTest {
 	public WebElement addSuccessMessage;
 	
 	@FindBy(xpath = "//button[.//span[@id='cart-total']]")
-	public WebElement total;
+	public WebElement totalEl;
 	
 	public Double getTotal() {
 		
-		action.explicitWait(getDriver(), total, 5000);
-		String totalFromCart = total.getText();
+		action.explicitWait(getDriver(), totalEl, 8000);
+		getDriver().navigate().refresh();
+		String totalFromCart = totalEl.getText();
 		String total = totalFromCart.split("\\$")[1];
 		Double finalTotal = Double.parseDouble(total);
+		System.out.println("Tota from cart is " + finalTotal);
 		return finalTotal;	
 	}
 	

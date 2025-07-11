@@ -1,8 +1,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test_Smoke">
-    <parameter name="browser" value="Firefox"></parameter>
+    <parameter name="browser" value="Chrome"></parameter>
+     <listeners>
+		<listener class-name="com.mystore.utility.ListenerClass"></listener>
+	</listeners>
   <groups>
-  	<run>
+  	<run> 
   		<include name="Smoke"></include>
   	</run>
   </groups>

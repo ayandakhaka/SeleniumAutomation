@@ -34,7 +34,7 @@ public class LoginPage extends BaseTest {
 	public AccountPage login(String email, String password) {
 		
 		action.type(emailElement, email);
-		action.type(passordElement, password);
+		action.type(passordElement, password.replaceAll(".0", ""));
 		action.click(getDriver(), loginButton);
 		return new AccountPage();
 	}

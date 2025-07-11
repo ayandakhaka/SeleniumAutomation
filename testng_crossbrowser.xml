@@ -1,6 +1,9 @@
 <suite name="CrossBrowser" thread-count="3">
   <test name="ChromeTest">
   <parameter name="browser" value="Chrome"></parameter>
+   <listeners>
+		<listener class-name="com.mystore.utility.ListenerClass"></listener>
+	</listeners>
     <classes>
       <class name="com.mystore.testcases.YourStoreHomePageLaunchTest"/>
     </classes>

@@ -25,7 +25,7 @@ public class ProductAddedToCartPage extends BaseTest {
 	
 	public String getAddToCartSuccessHeaderMessage() {
 		// Execute JavaScript to remove the button from the DOM
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver.get();
 		js.executeScript("arguments[0].remove();", closeXButton);
 		return addToCartSuccessHeaderMessage.getText();
 	}

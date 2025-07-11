@@ -1,5 +1,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test_All">
+  <parameter name="browser" value="Chrome"></parameter>
+  <listeners>
+		<listener class-name="com.mystore.utility.ListenerClass"></listener>
+	</listeners>
+  
     <classes>
       <class name="com.mystore.testcases.LoginTest"/>
       <class name="com.mystore.testcases.LaptopsAndNotebookTest"/>

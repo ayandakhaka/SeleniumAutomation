@@ -3,6 +3,9 @@
  */
 package com.mystore.pageobjects;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,6 +36,38 @@ public class AccountPage extends BaseTest {
 	
 	@FindBy(xpath = "//*[@id=\"content\"]/div/div/a")
 	private WebElement continueButton;
+	
+	@FindBy(id = "cart-total")
+	private WebElement addToCartButtonPrice;
+	
+	@FindBy(xpath = "//*[@id=\"cart\"]/ul/li[1]/table/tbody/tr/td[5]/button/i")
+	private WebElement removePrice;
+	
+//	public void clickAddToCartButtonPrice() {
+//		if(!addToCartButtonPrice.getText().contains(" 0 item(s) - $0.00")) {
+//			action.click(getDriver(), addToCartButtonPrice);
+//			action.explicitWait(getDriver(), removePrice, 10);
+//		}
+//	}
+	
+	public void clickAddToCartButtonPrice() {
+	    String cartText = addToCartButtonPrice.getText();
+
+	    // Extract price using regex
+	    Pattern pattern = Pattern.compile("\\$([0-9]+\\.?[0-9]*)");
+	    Matcher matcher = pattern.matcher(cartText);
+
+	    if (matcher.find()) {
+	        double price = Double.parseDouble(matcher.group(1));
+
+	        if (price > 0.00) {
+	            action.click(getDriver(), addToCartButtonPrice);
+	            action.click(getDriver(), removePrice);
+	           // action.explicitWait(getDriver(), addToCartButtonPrice, 10);
+	        }
+	        System.out.println("Price = " + price);
+	    }
+	}
 	
 	public LaptopsAndNotebooksPage navigateLaptopsAndNoteBookPage() {
 		action.mouseover(getDriver(), laptopsAndNoteBook);
