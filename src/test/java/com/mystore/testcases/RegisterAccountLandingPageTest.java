@@ -4,15 +4,11 @@
 package com.mystore.testcases;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.mystore.base.BaseTest;
-import com.mystore.pageobjects.AccountPage;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.RegisterAccountPage;
 import com.mystore.utility.Log;

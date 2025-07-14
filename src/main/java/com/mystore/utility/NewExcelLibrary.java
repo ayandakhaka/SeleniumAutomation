@@ -3,6 +3,7 @@ package com.mystore.utility;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Calendar;
+
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
@@ -198,14 +199,11 @@ public class NewExcelLibrary {
 			int colNum=-1;
 			if(index==-1)
 				return false;
-			
-			
 			sheet = workbook.getSheetAt(index);
 			
 
 			row=sheet.getRow(0);
-			for(int i=0;i<row.getLastCellNum();i++){
-				//System.out.println(row.getCell(i).getStringCellValue().trim());
+			for(int i=0;i<row.getLastCellNum();i++) {
 				if(row.getCell(i).getStringCellValue().trim().equals(colName))
 					colNum=i;
 			}
@@ -220,11 +218,6 @@ public class NewExcelLibrary {
 			cell = row.getCell(colNum);	
 			if (cell == null)
 		        cell = row.createCell(colNum);
-
-		    // cell style
-		    //CellStyle cs = workbook.createCellStyle();
-		    //cs.setWrapText(true);
-		    //cell.setCellStyle(cs);
 		    cell.setCellValue(data);
 
 		    fileOut = new FileOutputStream(path);
@@ -288,18 +281,12 @@ public class NewExcelLibrary {
 					return false;
 				
 			XSSFCellStyle style = workbook.createCellStyle();
-			//style.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-			//style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 			
 			sheet=workbook.getSheetAt(index);
 			
 			row = sheet.getRow(0);
 			if (row == null)
 				row = sheet.createRow(0);
-			
-			//cell = row.getCell();	
-			//if (cell == null)
-			//System.out.println(row.getLastCellNum());
 			if(row.getLastCellNum() == -1)
 				cell = row.createCell(0);
 			else
@@ -331,12 +318,7 @@ public class NewExcelLibrary {
 			workbook = new XSSFWorkbook(fis);
 			sheet=workbook.getSheet(sheetName);
 			XSSFCellStyle style = workbook.createCellStyle();
-			//style.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-			//XSSFCreationHelper createHelper = workbook.getCreationHelper();
-			//style.setFillPattern(HSSFCellStyle.NO_FILL);
-			
-		    
-		
+
 			for(int i =0;i<getRowCount(sheetName);i++){
 				row=sheet.getRow(i);	
 				if(row!=null){

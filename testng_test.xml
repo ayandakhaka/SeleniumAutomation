@@ -6,7 +6,7 @@
 	</listeners>
   
     <classes>
-      <class name="com.mystore.testcases.AddToCartPriceTest"/>
+      <class name="com.mystore.testcases.RegisterAccountLandingPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

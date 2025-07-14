@@ -7,6 +7,15 @@
   <test thread-count="5" name="Test_All(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
+      <class name="com.mystore.testcases.AddToCartTest">
+        <methods>
+          <include name="setup"/>
+          <include name="afterSuit"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="verifyItemAddedToCart" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.AddToCartTest -->
       <class name="com.mystore.testcases.AddToCartPriceTest">
         <methods>
           <include name="tearDown"/>

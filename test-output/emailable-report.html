@@ -9,10 +9,54 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test_All</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">46,977</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test_All</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">229,269</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test_All &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.mystore.testcases.AddToCartPriceTest</td><td><a href="#m0">verifyItemAddedToCart</a></td><td rowspan="1">1752238004075</td><td rowspan="1">21675</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test_All &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.mystore.testcases.AddToCartPriceTest</td><td><a href="#m0">verifyItemAddedToCart</a></td><td rowspan="1">1752493527110</td><td rowspan="1">15584</td></tr><tr class="failedodd"><td rowspan="1">com.mystore.testcases.AddToCartTest</td><td><a href="#m1">verifyItemAddedToCart</a></td><td rowspan="1">1752493602879</td><td rowspan="1">23281</td></tr><tr><th colspan="4">Test_All &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.mystore.testcases.LaptopsAndNotebookTest</td><td><a href="#m2">verifyLaptopsAndNotebookPageHeaderText</a></td><td rowspan="1">1752493490038</td><td rowspan="1">2842</td></tr><tr class="passedodd"><td rowspan="1">com.mystore.testcases.LoginTest</td><td><a href="#m3">verifySuccessLogin</a></td><td rowspan="1">1752493438567</td><td rowspan="1">12733</td></tr><tr class="passedeven"><td rowspan="1">com.mystore.testcases.RegisterAccountLandingPageTest</td><td><a href="#m4">registrationAccountTest</a></td><td rowspan="1">1752493511463</td><td rowspan="1">2430</td></tr><tr class="passedodd"><td rowspan="1">com.mystore.testcases.RegisterAccountPageTest</td><td><a href="#m5">verifyAccountRegisterTest</a></td><td rowspan="1">1752493555961</td><td rowspan="1">10240</td></tr><tr class="passedeven"><td rowspan="2">com.mystore.testcases.YourStoreHomePageLaunchTest</td><td><a href="#m6">verifyHomePageCurrentURL</a></td><td rowspan="1">1752493579265</td><td rowspan="1">146</td></tr><tr class="passedeven"><td><a href="#m7">verifyHomePageTitle</a></td><td rowspan="1">1752493592447</td><td rowspan="1">37</td></tr></tbody>
 </table>
-<h2>Test_All</h2><h3 id="m0">com.mystore.testcases.AddToCartPriceTest#verifyItemAddedToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test_All</h2><h3 id="m0">com.mystore.testcases.AddToCartPriceTest#verifyItemAddedToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [244.00] but found [610.00]
+	at com.mystore.testcases.AddToCartPriceTest.verifyItemAddedToCart(AddToCartPriceTest.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.mystore.testcases.AddToCartTest#verifyItemAddedToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>alwande@gmail.com</td><td>12345.0</td><td>6/9/25</td><td>2.0</td><td>Success: You have added HP LP3065 to your shopping cart!</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;)]//button[@class=&apos;close&apos;]&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ELIHLE&apos;, ip: &apos;192.168.137.1&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57029}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91689107e2b6cba75b5422b103358b58
+*** Element info: {Using=xpath, value=//div[contains(@class,&apos;alert&apos;)]//button[@class=&apos;close&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:702)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
+	at com.mystore.pageobjects.ProductAddedToCartPage.getAddToCartSuccessHeaderMessage(ProductAddedToCartPage.java:29)
+	at com.mystore.testcases.AddToCartTest.verifyItemAddedToCart(AddToCartTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.mystore.testcases.LaptopsAndNotebookTest#verifyLaptopsAndNotebookPageHeaderText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.mystore.testcases.LoginTest#verifySuccessLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>alwande@gmail.com</td><td>12345.0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.mystore.testcases.RegisterAccountLandingPageTest#registrationAccountTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.mystore.testcases.RegisterAccountPageTest#verifyAccountRegisterTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>6.34943658E8</td><td>12345.0</td><td>12345.0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.mystore.testcases.YourStoreHomePageLaunchTest#verifyHomePageCurrentURL</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.mystore.testcases.YourStoreHomePageLaunchTest#verifyHomePageTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

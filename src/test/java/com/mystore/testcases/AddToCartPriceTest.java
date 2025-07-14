@@ -7,7 +7,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mystore.base.BaseTest;
-import com.mystore.dataprovider.DataProviders;
 import com.mystore.pageobjects.AccountPage;
 import com.mystore.pageobjects.AddToCartPage;
 import com.mystore.pageobjects.HomePage;
@@ -40,13 +39,14 @@ public class AddToCartPriceTest extends BaseTest {
 	
 	@Test(groups = {"Regression","Sanity"})
 	public void verifyItemAddedToCart() throws InterruptedException {
-		Log.startTestCase("verifyItemAddedToCart");
+		
 		page = new HomePage();
 		lp = new LoginPage();
 		lanp = new LaptopsAndNotebooksPage();
 		atcp = new AddToCartPage();
 		patcp = new ProductAddedToCartPage();
 		ap = new AccountPage();
+		Log.startTestCase("verifyItemAddedToCart");
 		Log.info("User clicks on My Account");
 		page.clickMyaccountLink();
 		Log.info("User clicks on login link");
