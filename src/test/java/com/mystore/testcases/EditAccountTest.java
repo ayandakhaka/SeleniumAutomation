@@ -2,9 +2,10 @@
  * 
  */
 package com.mystore.testcases;
-
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -26,22 +27,21 @@ public class EditAccountTest extends BaseTest {
 	EditAccountPage eap;
 	
 	@Parameters("browser")
-	@BeforeMethod(groups = {"Smoke","Sanity","Regression"})
+	@BeforeClass(groups = {"Smoke","Sanity","Regression"})
 	public void setup(String browser) {
 		Log.info("Launching the browser");
 		launchApp(browser);
 
 	}
 
-	@AfterMethod(groups = {"Smoke","Sanity","Regression"})
+	//@AfterClass(groups = {"Smoke","Sanity","Regression"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
-	@Test(groups = {"Smoke","Sanity","Regression"},
-			dataProvider = "ProductCredentials",
-			dataProviderClass = DataProviders.class)
-	public void verifyEditAccountSuccessMessageText(String email, String pass) throws InterruptedException {
+	@Test(groups = {"Regression","Sanity"})
+	public void verifyEditAccountSuccessMessageText()
+		throws InterruptedException {
 		Log.startTestCase("verifyEditAccountSuccessMessageText");
 		page = new HomePage();
 		lp = new LoginPage();
@@ -51,7 +51,7 @@ public class EditAccountTest extends BaseTest {
 		Log.info("User clicks on login Link");
 		page.clickLoginLink();
 		Log.info("User enters credentials and click sign in");
-		lp.login(email, pass);
+		lp.login(prop.getProperty("email"), prop.getProperty("password"));
 		Log.info("User clicks on Edit Account");
 		eap.clickEditAccount();
 		Log.info("User edit telephone number field");
@@ -65,6 +65,11 @@ public class EditAccountTest extends BaseTest {
 		Log.info("User verify edit account success message");
 		Assert.assertEquals(actualResults, expectedResults, "Failed to verify edit account message");
 		Log.endTestCase("verifyEditAccountSuccessMessageText");
+	}
+	
+	@Test(groups = {"Regression","Sanity"})
+	public void verifyTitle() {
+		Assert.assertEquals(getDriver().getCurrentUrl(), "https://tutorialsninja.com/demo/index.php?route=account/account");
 	}
 
 }

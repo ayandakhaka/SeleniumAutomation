@@ -7,15 +7,15 @@
   <test thread-count="5" name="Test_All(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.mystore.testcases.AddToCartPriceTest">
+      <class name="com.mystore.testcases.EditAccountTest">
         <methods>
           <include name="tearDown"/>
           <include name="afterSuit"/>
-          <include name="verifyItemAddedToCart"/>
           <include name="setup"/>
+          <include name="verifyEditAccountSuccessMessageText"/>
           <include name="loadConfig"/>
         </methods>
-      </class> <!-- com.mystore.testcases.AddToCartPriceTest -->
+      </class> <!-- com.mystore.testcases.EditAccountTest -->
     </classes>
   </test> <!-- Test_All(failed) -->
 </suite> <!-- Failed suite [Suite] -->

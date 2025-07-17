@@ -37,7 +37,7 @@ public class EditAccountPage extends BaseTest {
 	@CacheLookup
 	private WebElement continueBtn;
 	
-	@FindBy(xpath = "//div[contains(@class, 'alert-success')]//i[@class='fa fa-check-circle']")
+	@FindBy(xpath = "//*[@id=\"account-account\"]/div[1]")
 	@CacheLookup
 	private WebElement editAccountSuccessMsg;
 	

@@ -66,19 +66,19 @@ public class DataProviders {
 		return data;
 	}
 	
-	@DataProvider(name = "addToCart")
-	public Object[][] getCartPrice() {
+	@DataProvider(name = "editAccount")
+	public Object[][] getEditAccount() {
 		// Totals rows count
-		int rows = obj.getRowCount("AddToCart");
+		int rows = obj.getRowCount("EditAccount");
 		// Total Columns
-		int column = obj.getColumnCount("AddToCart");
+		int column = obj.getColumnCount("EditAccount");
 		int actRows = rows - 1;
 
 		Object[][] data = new Object[actRows][column];
 
 		for (int i = 0; i < actRows; i++) {
 			for (int j = 0; j < column; j++) {
-				data[i][j] = obj.getCellData("AddToCart", j, i + 2);
+				data[i][j] = obj.getCellData("EditAccount", j, i + 2);
 			}
 		}
 		return data;
