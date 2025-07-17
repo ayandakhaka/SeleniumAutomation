@@ -23,19 +23,19 @@ public class AddToCartPage extends BaseTest {
 	}
 	
 	@FindBy(name = "option[225]")
-	public WebElement deliveryDateEl;
+	private WebElement deliveryDateEl;
 	
 	@FindBy(name = "quantity")
-	public WebElement quantityEl;
+	private WebElement quantityEl;
 	
 	@FindBy(id = "button-cart")
-	public WebElement addToCartbtn;
+	private WebElement addToCartbtn;
 	
 	@FindBy(xpath = "//*[@id=\"product-product\"]/div[1]")
-	public WebElement addSuccessMessage;
+	private WebElement addSuccessMessage;
 	
 	@FindBy(xpath = "//button[.//span[@id='cart-total']]")
-	public WebElement totalEl;
+	private WebElement totalEl;
 	
 	public Double getTotal() {
 		
@@ -44,7 +44,6 @@ public class AddToCartPage extends BaseTest {
 		String totalFromCart = totalEl.getText();
 		String total = totalFromCart.split("\\$")[1];
 		Double finalTotal = Double.parseDouble(total);
-		System.out.println("Tota from cart is " + finalTotal);
 		return finalTotal;	
 	}
 	

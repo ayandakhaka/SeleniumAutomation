@@ -26,10 +26,10 @@ public class AccountPage extends BaseTest {
 	}
 	
 	@FindBy(xpath = "//*[@id=\"menu\"]/div[2]/ul/li[2]/a")
-	public WebElement laptopsAndNoteBook;
+	private WebElement laptopsAndNoteBook;
 	
 	@FindBy(xpath = "//*[@id=\"menu\"]/div[2]/ul/li[2]/div/a")
-	public WebElement ShowAllLaptopsAndNotebooks;
+	private WebElement ShowAllLaptopsAndNotebooks;
 	
 	@FindBy(xpath = "//*[@id=\"content\"]/h1")
 	private WebElement successHeaderText;
@@ -42,13 +42,6 @@ public class AccountPage extends BaseTest {
 	
 	@FindBy(xpath = "//*[@id=\"cart\"]/ul/li[1]/table/tbody/tr/td[5]/button/i")
 	private WebElement removePrice;
-	
-//	public void clickAddToCartButtonPrice() {
-//		if(!addToCartButtonPrice.getText().contains(" 0 item(s) - $0.00")) {
-//			action.click(getDriver(), addToCartButtonPrice);
-//			action.explicitWait(getDriver(), removePrice, 10);
-//		}
-//	}
 	
 	public void clickAddToCartButtonPrice() {
 	    String cartText = addToCartButtonPrice.getText();

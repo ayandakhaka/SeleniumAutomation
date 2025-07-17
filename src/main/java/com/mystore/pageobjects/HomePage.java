@@ -23,16 +23,16 @@ public class HomePage extends BaseTest {
 	}
 
 	@FindBy(xpath = "//*[@id=\"top-links\"]/ul/li[2]/ul/li[1]/a")
-	public WebElement registerLink;
+	private WebElement registerLink;
 
 	@FindBy(xpath = "//*[@id=\"top-links\"]/ul/li[2]")
-	public WebElement myAccountLink;
+	private WebElement myAccountLink;
 
 	@FindBy(xpath = "//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a")
-	public WebElement loginLink;
+	private WebElement loginLink;
 
 	@FindBy(xpath = "//*[@id=\"logo\"]/h1/a")
-	public WebElement header;
+	private WebElement header;
 	
 	@FindBy(xpath = "//*[@id=\"menu\"]/div[2]/ul/li[2]/a")
 	private WebElement laptopsAndNotebooks;

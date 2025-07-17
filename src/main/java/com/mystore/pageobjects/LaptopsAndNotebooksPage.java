@@ -26,13 +26,13 @@ public class LaptopsAndNotebooksPage extends BaseTest {
 	private WebElement itemToAddToCart;
 
 	@FindBy(xpath = "//*[@id=\"content\"]/div[4]/div[1]/div/div[2]/div[2]/button[1]/i")
-	public WebElement addToCart;
+	private WebElement addToCart;
 
 	@FindBy(xpath = "//*[@id=\"content\"]/div[4]/div[1]/div/div[2]/div[2]/button[2]/i")
-	public WebElement addToWishList;
+	private WebElement addToWishList;
 
 	@FindBy(xpath = "//*[@id=\"content\"]/div[4]/div[1]/div/div[2]/div[2]/button[3]/i")
-	public WebElement compareThisProduct;
+	private WebElement compareThisProduct;
 	
 	@FindBy(xpath = "//*[@id=\"menu\"]/div[2]/ul/li[2]/div/a")
 	private WebElement clickOnAllLaptopsAndNotebooksLink;

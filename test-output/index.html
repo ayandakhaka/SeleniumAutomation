@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 2 failed,   6 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.mystore.testcases.AddToCartTest" class="method navigator-link" hash-for-method="verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)">verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.mystore.testcases.AddToCartPriceTest" class="method navigator-link" hash-for-method="verifyItemAddedToCart">verifyItemAddedToCart</a> <!-- method navigator-link -->
@@ -141,6 +136,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mystore.testcases.AddToCartTest" class="method navigator-link" hash-for-method="verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)">verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.mystore.testcases.LaptopsAndNotebookTest" class="method navigator-link" hash-for-method="verifyLaptopsAndNotebookPageHeaderText">verifyLaptopsAndNotebookPageHeaderText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -164,58 +164,6 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.mystore.testcases.AddToCartTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)">
-                  </a> <!-- verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!) -->
-                  <span class="method-name">verifyItemAddedToCart</span>
-                  <span class="parameters">(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;)]//button[@class=&apos;close&apos;]&quot;}
-  (Session info: chrome=138.0.7204.101)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ELIHLE&apos;, ip: &apos;192.168.137.1&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57029}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 91689107e2b6cba75b5422b103358b58
-*** Element info: {Using=xpath, value=//div[contains(@class,&apos;alert&apos;)]//button[@class=&apos;close&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:212)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:556)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:546)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:702)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
-	at com.mystore.pageobjects.ProductAddedToCartPage.getAddToCartSuccessHeaderMessage(ProductAddedToCartPage.java:29)
-	at com.mystore.testcases.AddToCartTest.verifyItemAddedToCart(AddToCartTest.java:77)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
               <span class="class-name">com.mystore.testcases.AddToCartPriceTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -226,7 +174,7 @@ Session ID: 91689107e2b6cba75b5422b103358b58
                   <span class="method-name">verifyItemAddedToCart</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [244.00] but found [610.00]
 	at com.mystore.testcases.AddToCartPriceTest.verifyItemAddedToCart(AddToCartPriceTest.java:76)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -252,29 +200,15 @@ Session ID: 91689107e2b6cba75b5422b103358b58
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.mystore.testcases.RegisterAccountLandingPageTest</span>
+              <span class="class-name">com.mystore.testcases.RegisterAccountPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="registrationAccountTest">
-                  </a> <!-- registrationAccountTest -->
-                  <span class="method-name">registrationAccountTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.mystore.testcases.LaptopsAndNotebookTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyLaptopsAndNotebookPageHeaderText">
-                  </a> <!-- verifyLaptopsAndNotebookPageHeaderText -->
-                  <span class="method-name">verifyLaptopsAndNotebookPageHeaderText</span>
+                  <a name="verifyAccountRegisterTest(6.34943658E8, 12345.0, 12345.0)">
+                  </a> <!-- verifyAccountRegisterTest(6.34943658E8, 12345.0, 12345.0) -->
+                  <span class="method-name">verifyAccountRegisterTest</span>
+                  <span class="parameters">(6.34943658E8, 12345.0, 12345.0)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -304,15 +238,45 @@ Session ID: 91689107e2b6cba75b5422b103358b58
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.mystore.testcases.RegisterAccountPageTest</span>
+              <span class="class-name">com.mystore.testcases.LaptopsAndNotebookTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAccountRegisterTest(6.34943658E8, 12345.0, 12345.0)">
-                  </a> <!-- verifyAccountRegisterTest(6.34943658E8, 12345.0, 12345.0) -->
-                  <span class="method-name">verifyAccountRegisterTest</span>
-                  <span class="parameters">(6.34943658E8, 12345.0, 12345.0)</span>
+                  <a name="verifyLaptopsAndNotebookPageHeaderText">
+                  </a> <!-- verifyLaptopsAndNotebookPageHeaderText -->
+                  <span class="method-name">verifyLaptopsAndNotebookPageHeaderText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mystore.testcases.AddToCartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)">
+                  </a> <!-- verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!) -->
+                  <span class="method-name">verifyItemAddedToCart</span>
+                  <span class="parameters">(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mystore.testcases.RegisterAccountLandingPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registrationAccountTest">
+                  </a> <!-- registrationAccountTest -->
+                  <span class="method-name">registrationAccountTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -443,40 +407,40 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyItemAddedToCart')
 data.setCell(0, 2, 'com.mystore.testcases.AddToCartTest')
-data.setCell(0, 3, 23281);
+data.setCell(0, 3, 13575);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyItemAddedToCart')
 data.setCell(1, 2, 'com.mystore.testcases.AddToCartPriceTest')
-data.setCell(1, 3, 15584);
+data.setCell(1, 3, 13270);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifySuccessLogin')
-data.setCell(2, 2, 'com.mystore.testcases.LoginTest')
-data.setCell(2, 3, 12733);
+data.setCell(2, 1, 'verifyAccountRegisterTest')
+data.setCell(2, 2, 'com.mystore.testcases.RegisterAccountPageTest')
+data.setCell(2, 3, 9791);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyAccountRegisterTest')
-data.setCell(3, 2, 'com.mystore.testcases.RegisterAccountPageTest')
-data.setCell(3, 3, 10240);
+data.setCell(3, 1, 'verifySuccessLogin')
+data.setCell(3, 2, 'com.mystore.testcases.LoginTest')
+data.setCell(3, 3, 7651);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyLaptopsAndNotebookPageHeaderText')
 data.setCell(4, 2, 'com.mystore.testcases.LaptopsAndNotebookTest')
-data.setCell(4, 3, 2842);
+data.setCell(4, 3, 3702);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'registrationAccountTest')
 data.setCell(5, 2, 'com.mystore.testcases.RegisterAccountLandingPageTest')
-data.setCell(5, 3, 2430);
+data.setCell(5, 3, 2985);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyHomePageCurrentURL')
+data.setCell(6, 1, 'verifyHomePageTitle')
 data.setCell(6, 2, 'com.mystore.testcases.YourStoreHomePageLaunchTest')
-data.setCell(6, 3, 146);
+data.setCell(6, 3, 121);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyHomePageTitle')
+data.setCell(7, 1, 'verifyHomePageCurrentURL')
 data.setCell(7, 2, 'com.mystore.testcases.YourStoreHomePageLaunchTest')
-data.setCell(7, 3, 37);
+data.setCell(7, 3, 50);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -495,34 +459,16 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.mystore.testcases.RegisterAccountLandingPageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSuit</span>
-                <br/>
-                <span class="ignored-method-name">loadConfig</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.mystore.testcases.AddToCartTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSuit</span>
-                <br/>
-                <span class="ignored-method-name">loadConfig</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.mystore.testcases.LaptopsAndNotebookTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSuit</span>
-                <br/>
-                <span class="ignored-method-name">loadConfig</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
               <span class="ignored-class-name">com.mystore.testcases.AddToCartPriceTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuit</span>
+                <br/>
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mystore.testcases.RegisterAccountPageTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">afterSuit</span>
                 <br/>
@@ -540,7 +486,25 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.mystore.testcases.RegisterAccountPageTest</span>
+              <span class="ignored-class-name">com.mystore.testcases.LaptopsAndNotebookTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuit</span>
+                <br/>
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mystore.testcases.AddToCartTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuit</span>
+                <br/>
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mystore.testcases.RegisterAccountLandingPageTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">afterSuit</span>
                 <br/>
@@ -563,128 +527,126 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">4577 ms</span>
+                <span class="method-start">7795 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySuccessLogin(alwande@gmail.com, 12345.0)</span>
-                <span class="method-start">26213 ms</span>
+                <span class="method-start">28934 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">39011 ms</span>
+                <span class="method-start">36621 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.LaptopsAndNotebookTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">67229 ms</span>
+                <span class="method-start">37929 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLaptopsAndNotebookPageHeaderText</span>
-                <span class="method-start">77684 ms</span>
+                <span class="method-start">49545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">80533 ms</span>
+                <span class="method-start">53251 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.RegisterAccountLandingPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">88622 ms</span>
+                <span class="method-start">54323 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registrationAccountTest</span>
-                <span class="method-start">99109 ms</span>
+                <span class="method-start">65482 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">101547 ms</span>
+                <span class="method-start">68470 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.AddToCartPriceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">104343 ms</span>
+                <span class="method-start">69665 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyItemAddedToCart</span>
-                <span class="method-start">114756 ms</span>
+                <span class="method-start">80319 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">131030 ms</span>
+                <span class="method-start">93961 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.RegisterAccountPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">133347 ms</span>
+                <span class="method-start">95374 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAccountRegisterTest(6.34943658E8, 12345.0, 12345.0)</span>
-                <span class="method-start">143607 ms</span>
+                <span class="method-start">107039 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">153853 ms</span>
+                <span class="method-start">116833 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.YourStoreHomePageLaunchTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">155558 ms</span>
+                <span class="method-start">117841 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageCurrentURL</span>
-                <span class="method-start">166911 ms</span>
+                <span class="method-start">127890 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">167061 ms</span>
+                <span class="method-start">127944 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">168731 ms</span>
+                <span class="method-start">129627 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">180093 ms</span>
+                <span class="method-start">139596 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">180140 ms</span>
+                <span class="method-start">139720 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.AddToCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
-                <span class="method-start">181851 ms</span>
+                <span class="method-start">141861 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyItemAddedToCart(alwande@gmail.com, 12345.0, 6/9/25, 2.0, Success: You have added HP LP3065 to your shopping cart!)</span>
-                <span class="method-start">190525 ms</span>
+                <span class="method-start">151119 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">214154 ms</span>
+                <span class="method-start">164699 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mystore.testcases.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuit</span>
-                <span class="method-start">231052 ms</span>
+                <span class="method-start">165964 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

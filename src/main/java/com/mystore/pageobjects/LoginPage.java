@@ -23,13 +23,13 @@ public class LoginPage extends BaseTest {
 	}
 
 	@FindBy(name = "email")
-	public WebElement emailElement;
+	private WebElement emailElement;
 
 	@FindBy(name = "password")
-	public WebElement passordElement;
+	private WebElement passordElement;
 
 	@FindBy(xpath = "//*[@id=\"content\"]/div/div[2]/div/form/input")
-	public WebElement loginButton;
+	private WebElement loginButton;
 
 	public AccountPage login(String email, String password) {
 		

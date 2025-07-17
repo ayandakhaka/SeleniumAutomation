@@ -72,7 +72,7 @@ public class AddToCartPriceTest extends BaseTest {
 		String expectedFomattedTotalPrice = String.format("%.2f", expectedTotal);
 		double totalFromCart = atcp.getTotal();
 		String actualFomattedTotalPriced = String.format("%.2f", totalFromCart);
-		System.out.println(actualFomattedTotalPriced + " = " + expectedFomattedTotalPrice);
+		
 		Assert.assertEquals(actualFomattedTotalPriced, expectedFomattedTotalPrice);
 		Log.endTestCase("verifyItemAddedToCart");
 		

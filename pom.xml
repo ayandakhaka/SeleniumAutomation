@@ -52,12 +52,6 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.7.0</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.example</groupId>
-			<artifactId>OrangeHRMAutomation</artifactId>
-			<version>1.0.0</version>
-		</dependency>
   </dependencies>
 
 
