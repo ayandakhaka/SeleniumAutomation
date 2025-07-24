@@ -132,7 +132,6 @@ public class Action extends BaseTest implements ActionInterface {
 			flag = ele.isDisplayed();
 			ele.clear();
 			ele.sendKeys(text);
-			// logger.info("Entered text :"+text);
 			flag = true;
 		} catch (Exception e) {
 			System.out.println("Location Not found");
@@ -163,7 +162,6 @@ public class Action extends BaseTest implements ActionInterface {
 				System.out.println("Select value from the DropDown");		
 			} else {
 				System.out.println("Not Selected value from the DropDown");
-				// throw new ElementNotFoundException("", "", "")
 			}
 		}
 	}
@@ -425,11 +423,9 @@ public class Action extends BaseTest implements ActionInterface {
 	public boolean moveToElement(WebDriver driver, WebElement ele) {
 		boolean flag = false;
 		try {
-			// WebElement element = driver.findElement(locator);
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			executor.executeScript("arguments[0].scrollIntoView(true);", ele);
 			Actions actions = new Actions(driver);
-			// actions.moveToElement(driver.findElement(locator)).build().perform();
 			actions.moveToElement(ele).build().perform();
 			flag = true;
 		} catch (Exception e) {

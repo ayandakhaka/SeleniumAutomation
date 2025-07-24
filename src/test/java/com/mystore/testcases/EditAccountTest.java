@@ -34,12 +34,12 @@ public class EditAccountTest extends BaseTest {
 
 	}
 
-	//@AfterClass(groups = {"Smoke","Sanity","Regression"})
+	@AfterClass(groups = {"Smoke","Sanity","Regression"})
 	public void tearDown() {
 		getDriver().quit();
 	}
 	
-	@Test(groups = {"Regression","Sanity"})
+	@Test(groups = {"Regression","Sanity"}, priority = 1)
 	public void verifyEditAccountSuccessMessageText()
 		throws InterruptedException {
 		Log.startTestCase("verifyEditAccountSuccessMessageText");
@@ -67,8 +67,8 @@ public class EditAccountTest extends BaseTest {
 		Log.endTestCase("verifyEditAccountSuccessMessageText");
 	}
 	
-	@Test(groups = {"Regression","Sanity"})
-	public void verifyTitle() {
+	@Test(groups = {"Regression","Sanity"}, priority = 2)
+	public void verifyAccountPageCurrentURL() {
 		Assert.assertEquals(getDriver().getCurrentUrl(), "https://tutorialsninja.com/demo/index.php?route=account/account");
 	}
 

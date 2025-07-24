@@ -22,7 +22,7 @@ public class HomePage extends BaseTest {
 		PageFactory.initElements(getDriver(), this);
 	}
 
-	@FindBy(xpath = "//*[@id=\"top-links\"]/ul/li[2]/ul/li[1]/a")
+	@FindBy(linkText = "Register")
 	private WebElement registerLink;
 
 	@FindBy(xpath = "//*[@id=\"top-links\"]/ul/li[2]")
