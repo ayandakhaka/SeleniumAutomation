@@ -12,6 +12,7 @@ import com.mystore.base.BaseTest;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.RegisterAccountPage;
 import com.mystore.utility.Log;
+import com.mystore.utility.RetryAnalyzer;
 
 /**
  * Author Ayanda Khaka 

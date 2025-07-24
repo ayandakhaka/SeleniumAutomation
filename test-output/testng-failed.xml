@@ -7,15 +7,15 @@
   <test thread-count="5" name="Test_All(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="com.mystore.testcases.EditAccountTest">
+      <class name="com.mystore.testcases.RegisterAccountLandingPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="afterSuit"/>
-          <include name="setup"/>
-          <include name="verifyEditAccountSuccessMessageText"/>
+          <include name="tearDown"/>
+          <include name="registrationAccountTest"/>
           <include name="loadConfig"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.mystore.testcases.EditAccountTest -->
+      </class> <!-- com.mystore.testcases.RegisterAccountLandingPageTest -->
     </classes>
   </test> <!-- Test_All(failed) -->
 </suite> <!-- Failed suite [Suite] -->
